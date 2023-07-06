@@ -1,0 +1,17 @@
+.label {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+  max-width: 60%;
+}
+
+@media (min-width: 768px) {
+  .label {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+

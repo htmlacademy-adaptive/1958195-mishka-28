@@ -1,0 +1,158 @@
+@use "./base/var.scss";
+
+.promo {
+  text-align: center;
+  position: relative;
+  padding-top: 27px;
+  color: #ffffff;
+
+  &::before,
+  &::after {
+    z-index: -1;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 178px);
+    position: absolute;
+    opacity: 0.85;
+    background-color: var.$base-color;
+  }
+
+  &::after {
+    z-index: -2;
+    background: var.$base-color url("../img/bg/promo-bg-mobile.jpg") no-repeat center top / cover;
+  }
+}
+
+.promo__block-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__text-wrapper {
+  margin-bottom: 29px;
+}
+
+.promo__title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.promo__description {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.promo__button {
+  order: 3;
+}
+
+.promo__img {
+  margin-bottom: -1px;
+}
+
+@media (min-width: 768px) {
+  .promo {
+    padding-top: 35px;
+    text-align: left;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .promo__block-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 522px;
+  }
+
+  .promo__text-wrapper {
+    margin-bottom: 49px;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    margin-bottom: 41px;
+    max-width: 420px;
+  }
+
+  .promo__description {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .promo__img {
+    position: absolute;
+    width: 709px;
+    height: 606px;
+    max-width: none;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .promo__button {
+    order: 0;
+    padding: 18px 27px;
+    font-size: 20px;
+    margin-left: 3px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo {
+    position: static;
+    padding: 80px 0 120px;
+    text-align: left;
+
+    &::before,
+    &::after {
+      display: block;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+    }
+
+    &::after {
+      background-image: url("../img/bg/promo-bg-desktop.jpg");
+      background-position: bottom left;
+    }
+  }
+
+  .promo__block-wrapper {
+    padding-bottom: 0;
+  }
+
+  .promo__text-wrapper {
+    margin-bottom: 52px;
+  }
+
+  .promo__img {
+    top: -82px;
+    transform: translateX(-29.5%);
+    width: 552px;
+    height: 499px;
+  }
+
+  .promo__button {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 31px;
+
+    &--promo {
+      padding: 0 118px;
+    }
+
+    &--form {
+      padding: 0 70px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 110px;
+
+    &--promo {
+      padding: 0 190px;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use "./base/var.scss";
+
+.footer {
+  flex-shrink: 0;
+  padding: 40px 0;
+  background-color: #f2f2f2;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer__logo-container {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.footer__logo {
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.footer__logo-text {
+  width: 128px;
+  height: 24px;
+}
+
+.footer__social {
+  align-self: center;
+  width: 100%;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.footer__developer-link {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 19px;
+  padding: 8px 0;
+  color: #444444;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 34px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    mask-image: url("../img/stack.svg#logo-htmlacademy");
+    background-color: #666666;
+  }
+
+  &:hover::after {
+    background-color: var.$base-color;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.footer__developer-icon {
+  width: 27px;
+  height: 34px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 56px 0;
+  }
+
+  .footer__container {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    grid-template-columns: 1fr 200px 1fr;
+  }
+
+  .footer__logo-container {
+    text-align: start;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .footer__logo {
+    display: inline-block;
+  }
+
+  .footer__logo-text {
+    width: 143px;
+    height: 27px;
+  }
+
+  .footer__social {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .footer__developer-link {
+    min-width: 167px;
+    max-width: 167px;
+    margin-left: auto;
+  }
+
+  .footer__developer-icon {
+    width: 27px;
+    height: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding: 66px 0;
+  }
+}

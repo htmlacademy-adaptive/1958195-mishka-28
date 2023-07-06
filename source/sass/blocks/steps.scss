@@ -1,0 +1,143 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.steps__title {
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.steps__list {
+  @include mixins.list-reset;
+}
+
+.steps__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.steps__description {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.steps__icon {
+  display: block;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 60px;
+  height: 60px;
+  background-color: var.$base-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+
+  &--useful {
+    background-size: 31px 32px;
+    background-image: url("../img/stack.svg#useful");
+  }
+
+  &--powder {
+    background-size: 27px 29px;
+    background-image: url("../img/stack.svg#powder");
+  }
+
+  &--food {
+    background-size: 25px 30px;
+    background-image: url("../img/stack.svg#food");
+  }
+
+  &--time {
+    background-size: 27px 32px;
+    background-image: url("../img/stack.svg#time");
+  }
+}
+
+@media (min-width: 768px) {
+  .steps__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px 64px;
+    counter-reset: item;
+  }
+
+  .steps__item {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 64px 40px 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      content: counter(item) "";
+      width: 140px;
+      top: 0;
+      right: 21%;
+      counter-increment: item;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+    }
+  }
+
+  .steps__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-bottom: 31px;
+  }
+
+  .steps__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px 80px;
+    counter-reset: item;
+  }
+
+  .steps__item {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 0;
+
+    &::before {
+      right: -4%;
+    }
+  }
+
+  .steps__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-bottom: 31px;
+  }
+
+  .steps__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

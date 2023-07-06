@@ -1,0 +1,148 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.services__list {
+  @include mixins.list-reset;
+  display: grid;
+  gap: 20px;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 30px 20px 19px 20px;
+  background-color: #f2f2f2;
+
+  &--icon-loss::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 53px;
+    top: 21px;
+    left: 23px;
+    background: url("../img/stack.svg#weight-loss") no-repeat center / cover;
+  }
+
+  &--icon-gain::after {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    background: url("../img/stack.svg#weight-gain") no-repeat center / cover;
+  }
+}
+
+.services__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-left: 71px;
+}
+
+.services__description-wrapper {
+  padding-bottom: 21px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 18px;
+}
+
+.services__description {
+  font-size: 14px;
+  line-height: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.services__button {
+  margin-top: auto;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .services__list {
+    gap: 30px;
+  }
+
+  .services__item {
+    padding: 77px 315px 55px 52px;
+
+    &--icon-loss::after {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      right: 61px;
+      left: auto;
+    }
+
+    &--icon-gain::after {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      right: 28px;
+      left: auto;
+    }
+  }
+
+  .services__description-wrapper {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 52px;
+  }
+
+  .services__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  .services__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+
+  .services__item {
+    padding: 77px 61px 57px 52px;
+
+    &--icon-loss::after {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+      right: auto;
+    }
+
+    &--icon-gain::after {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+      right: auto;
+    }
+  }
+
+  .services__description-wrapper {
+    margin-bottom: 27px;
+  }
+
+  .services__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+}

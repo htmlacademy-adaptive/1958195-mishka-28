@@ -2,11 +2,61 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
+  <body class="body">
+    <header class="body__header header">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+      <ul class="header__menu header__menu--hidden menu">
+        <li class="menu__item">
+            <a class="menu__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
 
+      <a class="header__logo" href="#" aria-current="page">
+        <picture>
+          <source media="(min-width: 1200px)"
+            srcset="../img/stack.svg#logo-desktop" width="149" height="72 ">
+          <source media="(min-width: 768px)"
+            srcset="../img/stack.svg#logo-tablet" width="113" height="46 ">
+          <img class="logo__img" src="../img/stack.svg#logo-mobile"
+            srcset="../img/stack.svg#logo-mobile" width="86" height="35" alt="Логотип - Мишка.">
+        </picture>
+      </a>
+
+      <ul class="header__menu menu">
+        <li class="menu__item">
+            <a class="menu__link menu__link--search" href="#">
+                <span class="visually-hidden">Поиск по сайту</span>
+            </a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link menu__link--cart" href="#">
+                Корзина:
+                <span class="menu__cart-total">пока пуста</span>
+            </a>
+        </li>
+      </ul>
+
+    </header>
+    <main class="body__main main">
+
+    </main>
+    <footer class="body__footer footer">
+
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

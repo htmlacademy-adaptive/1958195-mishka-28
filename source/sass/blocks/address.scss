@@ -1,0 +1,115 @@
+.address__content-block {
+  background-color: #f2f2f2;
+}
+
+.address__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 26px 0;
+}
+
+.address__promo-text {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  margin-right: 16px;
+  max-width: 170px;
+}
+
+.address__address {
+  max-width: 160px;
+}
+
+.address__address,
+.address__address-street {
+  line-height: 20px;
+  font-style: normal;
+}
+
+.address__map {
+  width: 100%;
+  height: 362px;
+
+  &--nojs .address__map-iframe {
+    display: none;
+  }
+}
+
+.address__map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.address__map-jpg {
+  display: block;
+  width: 100%;
+  height: 362px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .address__content-wrapper {
+    padding: 61px 40px;
+  }
+
+  .address__promo-text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .address__address {
+    text-align: right;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -8px;
+  }
+
+  .address__address-street {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  .address__address-city {
+    display: block;
+  }
+
+  .address__map {
+    height: 400px;
+  }
+
+  .address__map-iframe,
+  .address__map-jpg {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .address__content-wrapper {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 60px 75px 60px 80px;
+    width: 565px;
+    background-color: #ffffff;
+  }
+
+  .address__promo-text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .address__address {
+    text-align: left;
+  }
+
+  .address__map-iframe,
+  .address__map-jpg {
+    height: 400px;
+  }
+}
