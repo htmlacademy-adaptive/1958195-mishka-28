@@ -8,50 +8,192 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/favicon-180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="fonts/lato/lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="body">
     <header class="body__header header">
-
-      <ul class="header__menu header__menu--hidden menu">
-        <li class="menu__item">
-            <a class="menu__link" href="#">Каталог товаров</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link" href="#">Вязание на заказ</a>
-        </li>
-      </ul>
-
-      <a class="header__logo" href="#" aria-current="page">
-        <picture>
-          <source media="(min-width: 1200px)"
-            srcset="../img/stack.svg#logo-desktop" width="149" height="72 ">
-          <source media="(min-width: 768px)"
-            srcset="../img/stack.svg#logo-tablet" width="113" height="46 ">
-          <img class="logo__img" src="../img/stack.svg#logo-mobile"
-            srcset="../img/stack.svg#logo-mobile" width="86" height="35" alt="Логотип - Мишка.">
-        </picture>
-      </a>
-
-      <ul class="header__menu menu">
-        <li class="menu__item">
-            <a class="menu__link menu__link--search" href="#">
-                <span class="visually-hidden">Поиск по сайту</span>
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-wrapper">
+            <a class="header__logo logo" href="#" aria-current="page">
+              <picture>
+                <source media="(min-width: 980px)"
+                  srcset="../img/stack.svg#logo-desktop" width="149" height="72">
+                <source media="(min-width: 640px)"
+                  srcset="../img/stack.svg#logo-tablet" width="113" height="46">
+                <img class="logo__img" src="../img/stack.svg#logo-mobile"
+                  srcset="../img/stack.svg#logo-mobile" width="86" height="35" alt="Логотип - Мишка.">
+              </picture>
             </a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link menu__link--cart" href="#">
-                Корзина:
-                <span class="menu__cart-total">пока пуста</span>
-            </a>
-        </li>
-      </ul>
-
+            <button class="main-menu__button" type="button">
+              <span class="main-menu__button-icon"></span>
+              <span class="visually-hidden">Открыть / Закрыть меню.</span>
+            </button>
+            <nav class="header__main-menu main-menu">
+              <ul class="main-menu__list main-menu--nojs">
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Каталог товаров</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Вязание на заказ</a>
+                </li>
+              </ul>
+              <ul class="main-menu__user-list main-menu--nojs">
+                <li class="main-menu__user-item">
+                  <a class="main-menu__user-link main-menu__user-link--search" href="#">
+                    <span class="main-menu__user-link--search-text">Поиск по сайту</span>
+                  </a>
+                </li>
+                <li class="main-menu__user-item">
+                  <a class="main-menu__user-link main-menu__user-link--cart" href="#">
+                    Корзина:
+                    <span class="main-menu__cart-total">пока пуста</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__botton-wrapper">
+            <nav class="header__second-menu second-menu">
+              <ul class="second-menu__list">
+                <li class="second-menu__item">
+                  <a class="second-menu__link" href="#">Новые поступления</a>
+                </li>
+                <li class="second-menu__item">
+                  <a class="second-menu__link" href="#">Распродажа</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__description-wrapper">
+              <span class="header__description">Бесплатная доставка по России</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main class="body__main main">
+      <section class="main__hero hero border border--wave">
+        <h1 class="visually-hidden">Магазин вязаных товаров ручной работы</h1>
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="hero__title-wrapper">
+              <p class="hero__title title">Милые штуки ручной работы&nbsp;для дома</p>
+            </div>
+            <div class="hero__links-wrapper">
+              <a class="hero__link hero__link--interior" href="#">Предметы интерьера</a>
+              <a class="hero__link hero__link--toys" href="#">Детские игрушки</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <article class="main__top-product top-product border border--zigzag">
+        <div class="container">
+          <div class="top-product__wrapper">
+            <div class="top-product__title-wrapper">
+              <h2 class="top-product__title title">Вязаные корзинки</h2>
+              <span class="top-product__symbol">ТОВАР НЕДЕЛИ</span>
+            </div>
+            <div class="top-product__description-wrapper">
+              <p class="top-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+              <dl class="top-product__description-list">
+                <div class="top-product__description-group">
+                  <dt class="top-product__description-title">Цвет:</dt>
+                  <dd class="top-product__description-text">тиффани/серый</dd>
+                </div>
+                <div class="top-product__description-group">
+                  <dt class="top-product__description-title">Диаметр:</dt>
+                  <dd class="top-product__description-text">25 см</dd>
+                </div>
+                <div class="top-product__description-group">
+                  <dt class="top-product__description-title">Высота:</dt>
+                  <dd class="top-product__description-text">15 см</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="top-product__img-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 980px)"
+                  srcset="img/catalog/top-product-desktop.webp 1x, img/catalog/top-product-desktop@2x.webp 2x" width="525" height="636">
+                <source type="image/webp" media="(min-width: 640px)"
+                  srcset="img/catalog/top-product-tablet.webp 1x, img/catalog/top-product-tablet@2x.webp 2x" width="334" height="404">
+                <source type="image/webp"
+                  srcset="img/catalog/top-product-mobile.webp 1x, img/catalog/top-product-mobile@2x.webp 2x" width="260" height="315">
+                <source media="(min-width: 980px)"
+                  srcset="img/catalog/top-product-desktop.jpg 1x, img/catalog/top-product-desktop@2x.jpg 2x" width="525" height="636">
+                <source media="(min-width: 640px)"
+                  srcset="img/catalog/top-product-tablet.jpg 1x, img/catalog/top-product-tablet@2x.jpg 2x" width="334" height="404">
+                <img class="top-product__img" src="img/catalog/top-product-mobile.jpg"
+                  srcset="img/catalog/top-product-mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаные корзинки.">
+              </picture>
+            </div>
+            <div class="top-product__price-wrapper">
+              <span class="top-product__price">Цена: 990 руб.</span>
+              <a class="top-product__button button" href="#">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="main__about about">
+        <div class="container">
+          <div class="about__wrapper">
+            <h2 class="about__title title">Коротко о нас:</h2>
+            <ul class="about__list">
+              <li class="about__item">
+                <p class="about__text about__text--eco">Экологически чистые материалы</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text about__text--money">Скандинавский стиль по российской цене</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text about__text--heart">Увеличивает лайки на фотографиях</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text about__text--roll">Связано вручную с любовью и умилением</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text about__text--rocket">Поддержка отечественного производителя</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text about__text--gift">Поставляется в подарочной упаковке</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="main__reviews reviews border border--zigzag">
+        <div class="container">
+          <div class="reviews__wrapper">
+            <h2 class="reviews__title title">Отзывы</h2>
+            <ol class="reviews__list">
+              <li class="reviews__item">
+                <div class="reviews__text-wrapper">
+                  <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                </div>
+                <a class="reviews__user-wrapper" href="#">
+                  <span class="reviews__user-name">Анастасия Красильникова</span>
+                  <span class="reviews__user-link">@misssssiskras</span>
+                </a>
+              </li>
+            </ol>
+            <div class="reviews__control">
+              <button class="reviews__control-button reviews__control-button--prev">
+                <span class="visually-hidden">Предыдущий отзыв</span>
+              </button>
+              <button class="reviews__control-button reviews__control-button--next">
+                <span class="visually-hidden">Следующий отзыв</span>
+              </button>
+            </div>
+            <a class="reviews__button-sand button" href="#">Написать</a>
+          </div>
+        </div>
+      </section>
 
     </main>
     <footer class="body__footer footer">

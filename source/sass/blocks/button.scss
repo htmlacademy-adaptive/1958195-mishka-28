@@ -2,50 +2,32 @@
 
 .button {
   cursor: pointer;
-  text-align: center;
-  display: block;
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 117%;
   text-transform: uppercase;
-  color: #ffffff;
-  padding: 11px 26px;
-  border: none;
-  background-color: var.$base-color;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 16px 40px;
+  color: var.$dark-color--lighter;
+  border: 2px solid var.$dark-color--lighter;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: var.$base-color--hover;
+    color: #ffffff;
+    background-color: var.$dark-color--lighter;
   }
 
   &:focus-visible {
-    outline-offset: 2px;
-    outline: 2px solid var.$base-color--focus;
+    border-color: var.$base-color;
+    outline: none;
   }
 
   &:active {
-    color: #8ec36d;
-    background-color: var.$base-color--hover;
-  }
-
-  &:disabled {
-    cursor: default;
-    color: #cbcbcb;
-    background-color: var.$base-color--disabled;
-  }
-
-  &--more {
-    color: #444444;
-    background-color: #f2f2f2;
-
-    &:hover {
-      background-color: #ebebeb;
-    }
-
-    &:active {
-      color: #b9b9b9;
-    }
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var.$dark-color--lighter;
   }
 }

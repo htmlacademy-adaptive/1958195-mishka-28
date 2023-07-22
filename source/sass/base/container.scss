@@ -1,32 +1,21 @@
+@use "./base/var.scss";
+
 .container {
-  position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1150px;
   min-width: 320px;
-  padding: 0 20px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var.$tablet) {
   .container {
-    padding: 0 31px;
-
-    &--promo {
-      padding: 0 118px;
-    }
-
-    &--form {
-      padding: 0 70px;
-    }
+    padding: 0 50px;
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    padding: 0 110px;
-
-    &--promo {
-      padding: 0 190px;
-    }
-  }
-}
+// @media (min-width: var.$desktop) {
+//   .container {
+//     padding: 0 100px;
+//   }
+// }

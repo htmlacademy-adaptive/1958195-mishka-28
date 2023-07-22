@@ -1,0 +1,41 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.second-menu {
+  display: none;
+}
+
+.second-menu__list {
+  @include mixins.list-reset;
+  display: flex;
+  // flex-direction: row;
+}
+
+
+.second-menu {
+
+}
+
+.second-menu__item {
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+.second-menu__link {
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  line-height: 160%;
+  padding: 22px 0;
+  background-color: transparent;
+}
+
+@media (min-width: var.$desktop) {
+  .second-menu {
+    display: block;
+  }
+}
