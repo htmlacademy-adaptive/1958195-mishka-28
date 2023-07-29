@@ -1,0 +1,90 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.cards__list {
+  @include mixins.list-reset;
+}
+
+.cards__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.cards__img {
+  display: block;
+  width: 100%;
+}
+
+.cards__content-wrapper {
+  padding: 25px 28px;
+  border: 1px solid #ececec;
+}
+
+.cards__title-wrapper {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 22px;
+}
+
+.cards__item-title {
+  font-size: 17px;
+  line-height: 141%;
+  font-weight: 700;
+  color: var.$dark-color;
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.cards__description {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.cards__price-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cards__price {
+  font-size: 15px;
+  line-height: 160%;
+  font-weight: 700;
+  color: var.$dark-color;
+}
+
+.cards__button {
+  display: block;
+  position: relative;
+  width: 21px;
+  height: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 21px;
+    height: 18px;
+    mask-image: url("../img/stack.svg#cart-icon");
+    background-color: #cccccc;
+  }
+
+  &:hover::before {
+    background-color: var.$base-color;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid var.$base-color;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+    background-color: var.$base-color;
+  }
+}

@@ -6,13 +6,25 @@
   display: none;
   position: absolute;
   left: -30px;
-  top: 85px;
+  width: 100%;
+  top: 80px;
 
   &--active {
     display: flex;
     flex-direction: column;
-    width: 100%;
     z-index: 1;
+  }
+
+  &--nojs {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+  }
+
+  &--nojs ~ .main-menu__button {
+    display: none;
   }
 }
 
@@ -57,6 +69,22 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--active::before {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  }
+
+  &--active::after {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  }
+
+  &--active .main-menu__button-icon {
+    scale: 0;
+  }
 }
 
 .main-menu__button-icon {
@@ -88,7 +116,7 @@
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
-  color: inherit;
+  color: var.$dark-color;
   padding: 27px 30px 27px 76px;
   background-color: #ffffff;
 
@@ -205,7 +233,7 @@
 
     &--search {
       max-width: 85px;
-      padding: 35px 31px;
+      padding: 36px 30px 34px 32px;
       border-right: 1px solid #cccccc;
       border-left: 1px solid #cccccc;
     }
@@ -221,8 +249,7 @@
     }
 
     &--cart {
-      padding-left: 76px;
-      padding-right: 0;
+      padding: 34px 0 30px 82px;
     }
 
     &--search-text {
@@ -250,21 +277,43 @@
     }
   }
 
+  .main-menu__item {
+    &:not(:last-child) {
+      border-right: 1px solid #e1e1e1;
+      margin-right: 0;
+    }
+
+    &:first-child .main-menu__link {
+      padding-right: 35px;
+      padding-left: 0;
+    }
+
+    &:last-child .main-menu__link {
+      padding-left: 35px;
+      padding-right: 0;
+    }
+
+    &:nth-child(odd) .main-menu__link {
+      padding-right: 35px;
+      padding-left: 0;
+    }
+  }
+
   .main-menu__user-list {
     margin-left: auto;
     grid-column: 2 / -1;
   }
 
-  .main-menu__item {
-    &:not(:last-child) {
-      margin-right: 37px;
-    }
-  }
-
   .main-menu__link {
     font-size: 17px;
     line-height: 141%;
-    padding: 32px 0;
+    padding: 32px 35px;
     background-color: transparent;
+  }
+
+  .main-menu__user-link {
+    &--cart {
+      padding: 34px 0 30px 85px;
+    }
   }
 }

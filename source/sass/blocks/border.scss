@@ -12,9 +12,9 @@
     width: 100%;
     height: 6px;
     background-image: url("../img/zigzag.svg");
-    background-position-x: center;
+    background-position-x: left -7px center;
     background-repeat: repeat-x;
-    background-size: 14px 6px;
+    background-size: 320px 6px;
   }
 }
 
@@ -24,18 +24,18 @@
       content: "";
       z-index: 1;
       position: absolute;
-      bottom: 0;
+      bottom: -12px;
       left: 0;
       width: 100%;
-      height: 11px;
+      height: 24px;
       background-image: url("../img/wave.svg");
       background-repeat: repeat-x;
-      background-size: 38px 11px;
+      background-size: 768px 24px;
     }
 
     &--zigzag::after {
       height: 17px;
-      background-size: 38px 17px;
+      background-size: 772px 17px;
     }
   }
 }
@@ -43,13 +43,19 @@
 @media (min-width: var.$desktop) {
   .border {
     &--wave::before {
-      height: 17px;
-      background-size: 63px 17px;
+      bottom: -17px;
+      height: 34px;
+      background-size: 1250px 34px;
+      background-position-x: -50px;
     }
 
     &--zigzag::after {
+      width: calc(100% - 100px);
+      max-width: 1050px;
+      left: 50%;
+      transform: translateX(-50%);
       height: 23px;
-      background-size: 53px 23px;
+      background-size: 1050px 23px;
     }
   }
 }
