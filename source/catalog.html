@@ -27,8 +27,8 @@
                   srcset="../img/stack.svg#logo-mobile" width="86" height="35" alt="Логотип - Мишка.">
               </picture>
             </a>
-            <button class="main-menu__button" type="button">
-              <span class="main-menu__button-icon"></span>
+            <button class="header__burger-button burger-button burger-button--nojs" type="button">
+              <span class="burger-button__icon"></span>
               <span class="visually-hidden">Открыть / Закрыть меню.</span>
             </button>
             <nav class="header__main-menu main-menu main-menu--nojs">
@@ -37,13 +37,13 @@
                   <a class="main-menu__link" aria-current="page">Каталог товаров</a>
                 </li>
                 <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Вязание на заказ</a>
+                  <a class="main-menu__link" href="form.html">Вязание на заказ</a>
                 </li>
               </ul>
-              <ul class="main-menu__user-list main-menu--nojs">
+              <ul class="main-menu__user-list">
                 <li class="main-menu__user-item">
                   <a class="main-menu__user-link main-menu__user-link--search" href="#">
-                    <span class="main-menu__user-link--search-text">Поиск по сайту</span>
+                    <span class="main-menu__user-link-search-text">Поиск по сайту</span>
                   </a>
                 </li>
                 <li class="main-menu__user-item">
@@ -132,11 +132,11 @@
               </picture>
               <div class="cards__content-wrapper">
                 <div class="cards__title-wrapper">
-                  <h3 class="cards__item-title">Зайчик-попрыгайчик</h3>
-                  <p class="cards__description">Рост 30 см, вес 200 г</p>
+                  <h3 class="cards__item-title">Корзинка для белья</h3>
+                  <p class="cards__description">Диаметр 15 см, высота 10 см</p>
                 </div>
                 <div class="cards__price-wrapper">
-                  <span class="cards__price">1 200 руб.</span>
+                  <span class="cards__price">690 руб.</span>
                   <a class="cards__button" href="#">
                     <span class="visually-hidden">Добавить в корзину</span>
                   </a>
@@ -160,11 +160,11 @@
               </picture>
               <div class="cards__content-wrapper">
                 <div class="cards__title-wrapper">
-                  <h3 class="cards__item-title">Зайчик-попрыгайчик</h3>
-                  <p class="cards__description">Рост 30 см, вес 200 г</p>
+                  <h3 class="cards__item-title">Большая корзинка для&nbsp;игрушек</h3>
+                  <p class="cards__description">Диаметр 30 см, высота 30 см</p>
                 </div>
                 <div class="cards__price-wrapper">
-                  <span class="cards__price">1 200 руб.</span>
+                  <span class="cards__price">1 500 руб.</span>
                   <a class="cards__button" href="#">
                     <span class="visually-hidden">Добавить в корзину</span>
                   </a>
@@ -181,19 +181,19 @@
               <h2 class="video__title">Процесс производства</h2>
             </div>
             <div class="video__player-wrapper">
-              <picture>
+              <picture class="video__picture">
                 <source type="image/webp" media="(min-width: 980px)"
-                  srcset="img/catalog/product-3-desktop.webp 1x, img/catalog/product-3-desktop@2x.webp 2x" width="682" height="455">
+                  srcset="img/catalog/video-desktop.webp 1x, img/catalog/video-desktop@2x.webp 2x" width="682" height="455">
                 <source type="image/webp" media="(min-width: 640px)"
-                  srcset="img/catalog/product-3-tablet.webp 1x, img/catalog/product-3-tablet@2x.webp 2x" width="668" height="455">
+                  srcset="img/catalog/video-tablet.webp 1x, img/catalog/video-tablet@2x.webp 2x" width="668" height="455">
                 <source type="image/webp"
-                  srcset="img/catalog/product-3-mobile.webp 1x, img/catalog/product-3-mobile@2x.webp 2x" width="260" height="150">
+                  srcset="img/catalog/video-mobile.webp 1x, img/catalog/video-mobile@2x.webp 2x" width="260" height="150">
                 <source media="(min-width: 980px)"
-                  srcset="img/catalog/product-3-desktop.jpg 1x, img/catalog/product-3-desktop@2x.jpg 2x" width="682" height="455">
+                  srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x" width="682" height="455">
                 <source media="(min-width: 640px)"
-                  srcset="img/catalog/product-3-tablet.jpg 1x, product-3-tablet@2x.jpg 2x" width="668" height="455">
-                <img class="video__img" src="img/catalog/product-3-mobile.jpg"
-                  srcset="img/catalog/product-3-mobile@2x.jpg 2x" width="260" height="150" alt="Фото видео ролика.">
+                  srcset="img/catalog/video-tablet.jpg 1x, video-tablet@2x.jpg 2x" width="668" height="455">
+                <img class="video__img" src="img/catalog/video-mobile.jpg"
+                  srcset="img/catalog/video-mobile@2x.jpg 2x" width="260" height="150" alt="Фото видео ролика.">
               </picture>
               <button class="video__button-play" type="button">
                 <span class="visually-hidden">Воспроизвести видео</span>

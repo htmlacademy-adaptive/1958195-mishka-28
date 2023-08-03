@@ -26,6 +26,14 @@
 
 .main__header-inner {
   margin-bottom: 30px;
+
+  &--form {
+    margin-bottom: 17px;
+  }
+}
+
+.main__form {
+  margin-bottom: 56px;
 }
 
 .main__cards {
@@ -56,6 +64,26 @@
   .main__contacts {
     margin-bottom: 57px;
   }
+
+  .main__header-inner {
+    margin-bottom: 79px;
+
+    &--form {
+      margin-bottom: 67px;
+    }
+  }
+
+  .main__form {
+    margin-bottom: 50px;
+  }
+
+  .main__cards {
+    margin-bottom: 53px;
+  }
+
+  .main__video {
+    margin-bottom: 64px;
+  }
 }
 
 @media (min-width: var.$desktop) {
@@ -76,6 +104,22 @@
   }
 
   .main__contacts {
+    margin-bottom: 105px;
+  }
+
+  .main__header-inner {
+    margin-bottom: 128px;
+
+    &--form {
+      margin-bottom: 116px;
+    }
+  }
+
+  .main__cards {
+    margin-bottom: 57px;
+  }
+
+  .main__video {
     margin-bottom: 105px;
   }
 }
