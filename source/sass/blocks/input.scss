@@ -75,3 +75,15 @@
     }
   }
 }
+
+@media (min-width: var.$desktop) {
+  .input {
+    &--tel {
+      background: url("../img/stack.svg#phone") no-repeat right 7px center / 25px 24px;
+    }
+
+    &--email {
+      background: url("../img/stack.svg#mail") no-repeat right 4px center / 32px 21px;
+    }
+  }
+}
