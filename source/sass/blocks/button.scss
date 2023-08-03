@@ -30,6 +30,21 @@
     color: rgba(255, 255, 255, 0.3);
     background-color: var.$dark-color--lighter;
   }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+
+    &:hover {
+      color: var.$dark-color--lighter;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: var.$dark-color--lighter;
+      background-color: transparent;
+    }
+  }
 }
 
 @media (min-width: var.$tablet) {
