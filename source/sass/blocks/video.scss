@@ -1,6 +1,14 @@
 @use "./base/mixins.scss";
 @use "./base/var.scss";
 
+.video__wrapper {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
 .video__title-wrapper {
   padding: 22px 34px 26px;
   border: 1px solid #ececec;

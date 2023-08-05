@@ -15,6 +15,14 @@
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   }
+
+  &:hover .cards__item-title {
+    opacity: 0.7;
+  }
+
+  &:active .cards__item-title {
+    opacity: 0.3;
+  }
 }
 
 .cards__img {
@@ -168,9 +176,5 @@
 
   .cards__title-wrapper {
     margin-bottom: 12px;
-  }
-
-  .cards__price-wrapper {
-    // margin-top: auto;
   }
 }

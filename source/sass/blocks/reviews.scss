@@ -32,6 +32,18 @@
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var.$base-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__user-name {
@@ -116,7 +128,7 @@
       "content content"
       ". control";
     gap: 0 40px;
-    padding: 82px 0 37px 50px;
+    padding: 82px 0 17px 50px;
     margin-left: -50px;
     background: url("../img/review-bg.jpg") no-repeat left top / contain;
   }
@@ -150,13 +162,19 @@
 
   .reviews__control {
     grid-area: control;
-    margin-top: -28px;
+    margin-top: -48px;
   }
 
   .reviews__control-button {
     min-height: auto;
-    padding: 0;
+    padding: 20px 0;
     border: 0;
+
+    &:focus-visible {
+      z-index: 1;
+      outline: 2px solid var.$base-color;
+      border: none;
+    }
   }
 
   .reviews__button-sand {
@@ -169,7 +187,7 @@
 @media (min-width: var.$desktop) {
   .reviews__wrapper {
     grid-template-rows: auto 35px auto;
-    padding: 79px 0 86px 174px;
+    padding: 79px 0 66px 174px;
     margin-left: 0;
   }
 

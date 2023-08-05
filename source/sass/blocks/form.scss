@@ -132,6 +132,7 @@
     height: 40px;
     border: 2px solid #444444;
     border-radius: 50%;
+    transition: border-color 0.3s ease;
     background-color: transparent;
   }
 
@@ -153,6 +154,7 @@
     height: 38px;
     border: 2px solid #444444;
     border-radius: 0;
+    transition: border-color 0.3s ease;
     background-color: transparent;
   }
 
@@ -163,6 +165,27 @@
     min-width: 23px;
     height: 16px;
     background: url("../img/stack.svg#tick") no-repeat center;
+  }
+
+  &[type="radio"]:hover ~ .form__label::before,
+  &[type="checkbox"]:hover ~ .form__label::before {
+    border-color: var.$base-color;
+  }
+
+  &[type="radio"]:focus-visible ~ .form__label::before,
+  &[type="checkbox"]:focus-visible ~ .form__label::before {
+    border-color: var.$base-color;
+  }
+
+  &[type="radio"]:disabled ~ .form__label::before,
+  &[type="checkbox"]:disabled ~ .form__label::before {
+    border-color: #444444;
+  }
+
+  &[type="radio"]:disabled ~ .form__label,
+  &[type="checkbox"]:disabled ~ .form__label {
+    cursor: default;
+    opacity: 0.3;
   }
 }
 

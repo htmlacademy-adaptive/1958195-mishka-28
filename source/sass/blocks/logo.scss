@@ -1,0 +1,21 @@
+@use "./base/var.scss";
+
+.logo {
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var.$base-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo__img {
+  display: block;
+}
