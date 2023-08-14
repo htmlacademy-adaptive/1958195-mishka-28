@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 22px 0 17px;
+  padding: 22px 0;
 }
 
 .header__logo {
@@ -76,7 +76,7 @@
   .header__bottom {
     display: flex;
     border-top: 1px solid #e1e1e1;
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
   }
 
   .header__logo {

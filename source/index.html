@@ -10,7 +10,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>HTML Academy: Мишка</title>
   </head>
   <body class="body">
     <header class="body__header header">
@@ -19,9 +19,9 @@
           <div class="header__top-wrapper header__top-wrapper--nojs">
             <a class="header__logo logo" href="#" aria-current="page">
               <picture>
-                <source media="(min-width: 980px)"
+                <source media="(min-width: 1100px)"
                   srcset="../img/stack.svg#logo-desktop" width="149" height="72">
-                <source media="(min-width: 640px)"
+                <source media="(min-width: 690px)"
                   srcset="../img/stack.svg#logo-tablet" width="113" height="46">
                 <img class="logo__img" src="../img/stack.svg#logo-mobile"
                   srcset="../img/stack.svg#logo-mobile" width="86" height="35" alt="Логотип - Мишка.">
@@ -118,15 +118,15 @@
             </div>
             <div class="top-product__img-wrapper">
               <picture>
-                <source type="image/webp" media="(min-width: 980px)"
+                <source type="image/webp" media="(min-width: 1100px)"
                   srcset="img/catalog/top-product-desktop.webp 1x, img/catalog/top-product-desktop@2x.webp 2x" width="525" height="636">
-                <source type="image/webp" media="(min-width: 640px)"
+                <source type="image/webp" media="(min-width: 690px)"
                   srcset="img/catalog/top-product-tablet.webp 1x, img/catalog/top-product-tablet@2x.webp 2x" width="334" height="404">
                 <source type="image/webp"
                   srcset="img/catalog/top-product-mobile.webp 1x, img/catalog/top-product-mobile@2x.webp 2x" width="260" height="315">
-                <source media="(min-width: 980px)"
+                <source media="(min-width: 1100px)"
                   srcset="img/catalog/top-product-desktop.jpg 1x, img/catalog/top-product-desktop@2x.jpg 2x" width="525" height="636">
-                <source media="(min-width: 640px)"
+                <source media="(min-width: 690px)"
                   srcset="img/catalog/top-product-tablet.jpg 1x, img/catalog/top-product-tablet@2x.jpg 2x" width="334" height="404">
                 <img class="top-product__img" src="img/catalog/top-product-mobile.jpg"
                   srcset="img/catalog/top-product-mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаные корзинки.">
@@ -213,13 +213,13 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1145px)"
                     srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="527" height="457">
-                  <source type="image/webp" media="(min-width: 640px)"
+                  <source type="image/webp" media="(min-width: 690px)"
                     srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="457">
                   <source type="image/webp"
                     srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" width="320" height="454">
                   <source media="(min-width: 1145px)"
                     srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" width="527" height="457">
-                  <source media="(min-width: 640px)"
+                  <source media="(min-width: 690px)"
                     srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="457">
                   <img class="contacts__map-img" src="img/map-mobile.jpg"
                     srcset="img/map-mobile@2x.jpg 2x" width="320" height="454" alt="Карта проезда.">
@@ -234,8 +234,11 @@
     <footer class="body__footer footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a class="footer__logo logo" href="#" aria-current="page">
-            <img class="logo__img" src="../img/stack.svg#logo-footer" width="102" height="34" alt="Логотип - Мишка.">
+          <a class="footer__logo" href="#" aria-current="page">
+            <svg class="footer__logo-img" width="102" height="34">
+              <use xlink:href="img/stack.svg#logo-footer"></use>
+            </svg>
+            <span class="visually-hidden">Логотип - Мишка.</span>
           </a>
           <div class="footer__social-wrapper">
             <ul class="footer__social-list">
@@ -256,7 +259,13 @@
               </li>
             </ul>
           </div>
-          <a class="footer__dev-link" href="#">Разработано</a>
+          <a class="footer__dev-link" href="https://htmlacademy.ru/profession/frontender">
+            Разработано
+            <svg class="footer__dev-logo" width="27" height="35">
+              <use xlink:href="img/stack.svg#htmlacademy"></use>
+            </svg>
+            <span class="visually-hidden">в HTML-Academy.</span>
+          </a>
         </div>
       </div>
     </footer>
@@ -281,7 +290,7 @@
               </li>
             </ul>
           </fieldset>
-          <button class="modal__button" type="submit">Добавить</button>
+          <button class="modal__f5tbutton" type="submit">Добавить</button>
         </form>
       </div>
     </div>
