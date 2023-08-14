@@ -1,0 +1,33 @@
+@use "./base/var.scss";
+
+.header-inner {
+  padding: 72px 0 73px;
+  background-color: #f1f1f1;
+}
+
+.header-inner__title {
+  font-size: 27px;
+  text-align: center;
+}
+
+@media (min-width: var.$tablet) {
+  .header-inner {
+    padding: 34px 0 75px;
+  }
+
+  .header-inner__title {
+    font-size: 43px;
+    line-height: 116%;
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .header-inner {
+    padding: 38px 0 95px;
+  }
+
+  .header-inner__title {
+    font-size: 53px;
+    line-height: 107%;
+  }
+}

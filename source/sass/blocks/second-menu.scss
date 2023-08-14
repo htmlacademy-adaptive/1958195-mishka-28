@@ -1,0 +1,54 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.second-menu {
+  display: none;
+}
+
+.second-menu__list {
+  @include mixins.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.second-menu__item {
+  &:not(:last-child) {
+    margin-right: 45px;
+  }
+}
+
+.second-menu__link {
+  display: block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 160%;
+  padding: 22px 0;
+  color: var.$dark-color;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .second-menu {
+    display: block;
+  }
+
+  .second-menu__item {
+    &:not(:last-child) {
+      margin-right: 62px;
+    }
+  }
+
+  .second-menu__link {
+    padding: 20px 0;
+  }
+}

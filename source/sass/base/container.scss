@@ -1,0 +1,16 @@
+@use "./base/var.scss";
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  min-width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: var.$tablet) {
+  .container {
+    padding: 0 50px;
+  }
+}
+

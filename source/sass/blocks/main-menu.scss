@@ -1,0 +1,250 @@
+@use "./base/mixins.scss";
+@use "./base/var.scss";
+
+.main-menu {
+  @include mixins.list-reset;
+  display: none;
+  position: absolute;
+  left: -30px;
+  width: 100%;
+  top: 80px;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+  }
+
+  &--nojs {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+  }
+
+  &--nojs .main-menu__list,
+  &--nojs .main-menu__user-list {
+    width: 100%;
+  }
+}
+
+.main-menu__list,
+.main-menu__user-list {
+  @include mixins.list-reset;
+  flex-direction: column;
+  width: calc(100% + 60px);
+}
+
+.main-menu__item,
+.main-menu__user-item {
+  border-bottom: 1px solid #ececec;
+}
+
+.main-menu__link,
+.main-menu__user-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  color: var.$dark-color;
+  padding: 27px 30px 27px 76px;
+  background-color: #ffffff;
+
+  &--search::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    mask-image: url("../img/stack.svg#search-icon");
+    mask-repeat: no-repeat;
+    background-color: #cccccc;
+  }
+
+  &--cart::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 18px;
+    mask-image: url("../img/stack.svg#cart-icon");
+    background-color: #cccccc;
+  }
+
+  &--search:hover::before,
+  &--cart:hover::before {
+    opacity: 1;
+    background-color: var.$base-color;
+  }
+
+  &:hover {
+    color: #666666;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+@media (min-width: var.$tablet) {
+  .main-menu {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: static;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .main-menu__list {
+    justify-content: flex-start;
+    align-self: flex-start;
+    position: relative;
+    order: 2;
+    max-width: calc(100% - 261px);
+
+    &::before {
+      content: "";
+      left: -50px;
+      position: absolute;
+      height: 100%;
+      width: calc(100% + 361px);
+      background-color: #f9f9f9;
+      border-top: 1px solid #e1e1e1;
+    }
+  }
+
+  .main-menu__user-list {
+    max-width: calc(100% - 140px);
+    justify-content: flex-end;
+  }
+
+  .main-menu__list,
+  .main-menu__user-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-menu__item,
+  .main-menu__user-item {
+    border-bottom: none;
+  }
+
+  .main-menu__item {
+    &:not(:last-child) {
+      margin-right: 37px;
+    }
+  }
+
+  .main-menu__link {
+    font-size: 15px;
+    line-height: 160%;
+    padding: 22px 0;
+    background-color: transparent;
+  }
+
+  .main-menu__user-link {
+    font-size: 17px;
+    line-height: 141%;
+    display: block;
+    padding: 32px 0;
+    background-color: transparent;
+
+    &--search {
+      max-width: 85px;
+      padding: 36px 30px 34px 32px;
+      border-right: 1px solid #cccccc;
+      border-left: 1px solid #cccccc;
+    }
+
+    &--search::before {
+      position: relative;
+      display: block;
+      width: 21px;
+      height: 18px;
+      left: 0;
+      top: 0;
+      transform: translateY(0%);
+    }
+
+    &--cart {
+      padding: 34px 0 30px 82px;
+    }
+  }
+
+  .main-menu__user-link-search-text {
+    display: none;
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .main-menu {
+    display: grid;
+    grid-template-columns: 1fr 210px 1fr;
+    align-items: start;
+  }
+
+  .main-menu__list {
+    justify-content: flex-start;
+    align-self: flex-start;
+    position: relative;
+    order: 0;
+    max-width: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .main-menu__item {
+    &:not(:last-child) {
+      border-right: 1px solid #e1e1e1;
+      margin-right: 0;
+    }
+
+    &:first-child .main-menu__link {
+      padding-right: 35px;
+      padding-left: 0;
+    }
+
+    &:last-child .main-menu__link {
+      padding-left: 35px;
+      padding-right: 0;
+    }
+
+    &:nth-child(odd) .main-menu__link {
+      padding-right: 35px;
+      padding-left: 0;
+    }
+  }
+
+  .main-menu__user-list {
+    margin-left: auto;
+    grid-column: 2 / -1;
+  }
+
+  .main-menu__link {
+    font-size: 17px;
+    line-height: 141%;
+    padding: 32px 35px;
+    background-color: transparent;
+  }
+
+  .main-menu__user-link {
+    &--cart {
+      padding: 34px 0 30px 85px;
+    }
+  }
+}

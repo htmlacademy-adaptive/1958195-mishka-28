@@ -1,0 +1,55 @@
+@use "./base/var.scss";
+
+.button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 14px;
+  color: var.$dark-color--lighter;
+  border: 2px solid var.$dark-color--lighter;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+    background-color: var.$dark-color--lighter;
+  }
+
+  &:focus-visible {
+    border-color: var.$base-color;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var.$dark-color--lighter;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+
+    &:hover {
+      color: var.$dark-color--lighter;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: var.$dark-color--lighter;
+      background-color: transparent;
+    }
+  }
+}
+
+@media (min-width: var.$tablet) {
+  .button {
+    font-size: 17px;
+    line-height: 117%;
+  }
+}

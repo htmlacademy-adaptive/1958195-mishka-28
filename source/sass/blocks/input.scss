@@ -1,0 +1,89 @@
+@use "./base/var.scss";
+
+.input {
+  position: relative;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 106%;
+  color: #444444;
+  padding: 15px 0 14px;
+  border: none;
+  width: 100%;
+  transition: border 0.3s ease;
+  border-bottom: 2px solid var.$dark-color;
+
+  &--textarea {
+    padding: 17px;
+    border: 2px solid var.$dark-color;
+    min-height: 142px;
+    min-width: 100%;
+    max-width: max-content;
+  }
+
+  &--tel {
+    padding: 17px 40px 17px 0;
+    background: url("../img/stack.svg#phone") no-repeat right 4px center / 25px 24px;
+  }
+
+  &--tel:hover,
+  &--tel:active,
+  &--tel:focus-visible {
+    background-image: url("../img/stack.svg#phone-hover");
+  }
+
+  &--email {
+    padding: 17px 40px 17px 0;
+    background: url("../img/stack.svg#mail") no-repeat right 2px center / 32px 21px;
+  }
+
+  &--email:hover,
+  &--email:active,
+  &--email:focus-visible {
+    background-image: url("../img/stack.svg#mail-hover");
+  }
+
+  &::placeholder {
+    color: var.$dark-color;
+    opacity: 0.3;
+  }
+
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: var.$base-color;
+    outline: none;
+  }
+}
+
+@media (min-width: var.$tablet) {
+  .input {
+    font-size: 19px;
+    line-height: 94%;
+    padding: 11px 18px 13px 18px;
+
+    &--tel {
+      background: url("../img/stack.svg#phone") no-repeat right 26px center / 25px 24px;
+    }
+
+    &--email {
+      background: url("../img/stack.svg#mail") no-repeat right 22px center / 32px 21px;
+    }
+
+    &--textarea {
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: var.$desktop) {
+  .input {
+    &--tel {
+      background: url("../img/stack.svg#phone") no-repeat right 7px center / 25px 24px;
+    }
+
+    &--email {
+      background: url("../img/stack.svg#mail") no-repeat right 4px center / 32px 21px;
+    }
+  }
+}

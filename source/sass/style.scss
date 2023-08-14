@@ -1,1 +1,26 @@
-// Начните писать стили здесь
+@use "./base/base.scss";
+@use "./base/var.scss";
+@use "./base/mixins.scss";
+@use "./base/container.scss";
+@use "./blocks/body.scss";
+@use "./blocks/title.scss";
+@use "./blocks/button.scss";
+@use "./blocks/main.scss";
+@use "./blocks/logo.scss";
+@use "./blocks/header.scss";
+@use "./blocks/main-menu.scss";
+@use "./blocks/burger-button.scss";
+@use "./blocks/second-menu.scss";
+@use "./blocks/hero.scss";
+@use "./blocks/border.scss";
+@use "./blocks/top-product.scss";
+@use "./blocks/about.scss";
+@use "./blocks/reviews.scss";
+@use "./blocks/contacts.scss";
+@use "./blocks/footer.scss";
+@use "./blocks/modal.scss";
+@use "./blocks/header-inner.scss";
+@use "./blocks/cards.scss";
+@use "./blocks/video.scss";
+@use "./blocks/form.scss";
+@use "./blocks/input.scss";
