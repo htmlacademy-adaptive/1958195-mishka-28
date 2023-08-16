@@ -4,10 +4,6 @@
   z-index: 1;
 }
 
-.header__top {
-  background-color: #ffffff;
-}
-
 .header__top-wrapper {
   display: flex;
   align-items: center;
@@ -46,10 +42,6 @@
       margin-bottom: 20px;
     }
 
-    &--nojs .main-menu__button {
-      display: none;
-    }
-
     &--nojs .header__main-menu {
       border-top: 1px solid #ececec;
     }
@@ -63,7 +55,6 @@
   }
 
   .header__top {
-    background-color: transparent;
     margin-bottom: -68px;
   }
 
@@ -76,7 +67,6 @@
   .header__bottom {
     display: flex;
     border-top: 1px solid #e1e1e1;
-    background-color: #f9f9f9;
   }
 
   .header__logo {

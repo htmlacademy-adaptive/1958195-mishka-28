@@ -6,12 +6,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
+  min-width: 320px;
   background-color: rgba($color: #ffffff, $alpha: 0.9);
 
   &--active {
@@ -20,8 +21,8 @@
 }
 
 .modal__wrapper {
-  padding: 37px 30px 46px;
-  width: 100%;
+  padding: 29px 30px 46px;
+  width: 320px;
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   background-color: #ffffff;
@@ -36,7 +37,8 @@
   text-transform: uppercase;
   color: var.$dark-color;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  padding: 0 50px;
 }
 
 .modal__form {
@@ -52,18 +54,18 @@
 }
 
 .modal__legend {
-  font-size: 17px;
-  line-height: 176%;
+  font-size: 15px;
+  line-height: 200%;
   text-align: center;
   padding: 0;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .modal__list {
   @include mixins.list-reset;
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(3, minmax(62px, 33.3%));
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 34px;
 }
@@ -77,6 +79,7 @@
 .modal__label {
   position: relative;
   width: 100%;
+  max-width: 200px;
   height: 100%;
   cursor: pointer;
   font-size: 17px;
@@ -124,7 +127,6 @@
   }
 
   &:focus-visible {
-
     outline: 2px solid var.$base-color--darken;
   }
 }
@@ -132,15 +134,27 @@
 @media (min-width: var.$tablet) {
   .modal__wrapper {
     padding: 37px 105px 46px;
-    width: auto;
+    width: 566px;
   }
 
   .modal__title {
     font-size: 30px;
     line-height: 190%;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .modal__legend {
+    font-size: 17px;
+    line-height: 176%;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
   }
 
   .modal__list {
-    grid-template-columns: repeat(3, minmax(112px, 33.3%));
+    padding: 0 4px;
+    margin-bottom: 35px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

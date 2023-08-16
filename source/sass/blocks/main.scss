@@ -46,6 +46,7 @@
 
 @media (min-width: var.$tablet) {
   .main__hero {
+    margin-top: -67px;
     margin-bottom: 52px;
   }
 
@@ -66,6 +67,7 @@
   }
 
   .main__header-inner {
+    margin-top: -67px;
     margin-bottom: 79px;
 
     &--form {
@@ -100,7 +102,7 @@
   }
 
   .main__reviews {
-    margin-bottom: 76px;
+    margin-bottom: 72px;
   }
 
   .main__contacts {
