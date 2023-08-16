@@ -112,16 +112,6 @@
     position: relative;
     order: 2;
     max-width: calc(100% - 261px);
-
-    &::before {
-      content: "";
-      left: -50px;
-      position: absolute;
-      height: 100%;
-      width: calc(100% + 361px);
-      background-color: #f9f9f9;
-      border-top: 1px solid #e1e1e1;
-    }
   }
 
   .main-menu__user-list {
@@ -202,10 +192,6 @@
     position: relative;
     order: 0;
     max-width: none;
-
-    &::before {
-      display: none;
-    }
   }
 
   .main-menu__item {

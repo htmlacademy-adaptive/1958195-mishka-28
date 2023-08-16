@@ -185,6 +185,10 @@
 }
 
 @media (min-width: var.$desktop) {
+  .reviews {
+    padding-bottom: 89px;
+  }
+
   .reviews__wrapper {
     grid-template-rows: auto 35px auto;
     padding: 79px 0 66px 174px;
